@@ -28,7 +28,13 @@ Route::get('event/{id}', function ($id) {
     return view('event.show', [
         'event' => $id
     ]);
-});
+}) ->name('event.show');
+
+Route::get('reserve/{id}', function($id){
+    return view('event.reservation', [
+        'reserve' => $id
+    ]);
+})->name('event.reservation');
 
 
 
